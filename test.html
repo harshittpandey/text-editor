@@ -3,64 +3,73 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">
-	.w3-sidebar {position: absolute;right: 0px;width: 80px;background: #222;}
+	.sidebar1{position: absolute;right: 0px;width: 80px;background: #2d2d2d;}
+  .sidebar2{position: absolute;left: 0px;width: 200px;background: black;}
 </style>
 </head>
-<body>
+<body><!-- 
+<div class="w3-sidebar1 w3-bar-block w3-black w3-small w3-hide-small w3-center">
+  
+</div> -->
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-small w3-hide-small w3-center">
+<nav class="w3-sidebar sidebar1 w3-bar-block w3-black w3-small w3-center">
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">create_new_folder</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="fa fa-print w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">exit_to_app</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="fa fa-cut w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="fa fa-copy w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="fa fa-paste w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">find_replace</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">fullscreen</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">zoom_in</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">zoom_out</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">image</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">first_page</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">last_page</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">branding_watermark</i>
   </a>
   <a href="#" class="w3-bar-item w3-button w3-padding-small w3-light-grey" style="border: 1px inset white">
-    <i class="fa fa-home w3-xxlarge" style="border: 2px solid black ;padding:5px "></i>
+    <i class="material-icons w3-xxlarge" style="border: 2px solid black ;padding:5px ">contacts</i>
   </a>
   
 </nav>
-
+<div class="w3-sidebar sidebar2 w3-bar-block w3-black w3-small  w3-center">
+</div>
+<div>
+ <textarea id="ac1" rows="27" cols="110" spellcheck="true" style="margin-left: 250px;margin-top: 40px;border:1px solid black; "></textarea>
+</div>
 </body>
 </html>
