@@ -11,7 +11,15 @@
 <style type="text/css">
 	.sidebar1{position: absolute;right: 0px;width: 80px;background: #2d2d2d;}
   .sidebar2{position: absolute;left: 0px;width: 200px;background: black;}
+  #ac1{display: none;}
 </style>
+<script type="text/javascript">
+  function changeDisplay()
+  {
+    document.getElementById('ac1').style.display="block";
+    document.getElementById('startbutton').style.display="none";
+  }
+</script>
 </head>
 <body><!-- 
 <div class="w3-sidebar1 w3-bar-block w3-black w3-small w3-hide-small w3-center">
@@ -68,8 +76,9 @@
 </nav>
 <div class="w3-sidebar sidebar2 w3-bar-block w3-black w3-small  w3-center">
 </div>
-<div>
- <textarea id="ac1" rows="27" cols="110" spellcheck="true" style="margin-left: 250px;margin-top: 40px;border:1px solid black; "></textarea>
-</div>
+<div id="div1">
+ <textarea class="areatext" id="ac1" rows="27" cols="110" spellcheck="true" style="margin-left: 250px;/*margin-top: 40px*/;border:1px solid black; "></textarea>
+   <button id="startbutton" style="position: absolute;left: 210px;margin-left: 20%" onclick="changeDisplay()">create new file</button>
+   </div>
 </body>
 </html>
