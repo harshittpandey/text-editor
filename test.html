@@ -12,13 +12,38 @@
 	.sidebar1{position: absolute;right: 0px;width: 80px;background: #2d2d2d;}
   .sidebar2{position: absolute;left: 0px;width: 200px;background: black;}
   #ac1{display: none;}
+  #countdiv{display: none;}
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $(document).ready(
+    function(){
+      $("#startbutton").click(function(){$("#startbutton").hide();
+        $("#ac1").show(); $("#countdiv").show();})
+    }
+    );
+
+  // jquery to count words
+  $(document).ready(function()
+{
+var wordCounts = {};
+$("#ac1").keyup(
+    function() {
+    var matches = this.value.match(/\b/g);
+    wordCounts[this.id]= matches ? matches.length/2 : 0;
+    var finalCount = 0;
+    $.each(wordCounts, 
+        function(k, v) {
+        finalCount += v;
+    }
+    );
+    $('#display_count').html(finalCount);
+}
+);
+}); 
+
+</script>
 <script type="text/javascript">
-  function changeDisplay()
-  {
-    document.getElementById('ac1').style.display="block";
-    document.getElementById('startbutton').style.display="none";
-  }
 </script>
 </head>
 <body><!-- 
@@ -76,9 +101,12 @@
 </nav>
 <div class="w3-sidebar sidebar2 w3-bar-block w3-black w3-small  w3-center">
 </div>
+<div id="countdiv" style="margin-left: 1200px;">Words 
+        <span id="display_count"> 0</span>
+       </div>
 <div id="div1">
- <textarea class="areatext" id="ac1" rows="27" cols="110" spellcheck="true" style="margin-left: 250px;/*margin-top: 40px*/;border:1px solid black; "></textarea>
-   <button id="startbutton" style="position: absolute;left: 210px;margin-left: 20%" onclick="changeDisplay()">create new file</button>
-   </div>
+ <textarea class="areatext" id="ac1" rows="27" cols="110" spellcheck="true" style="margin-left: 250px;margin-top: 10px;border:1px solid black; "></textarea>
+   <button id="startbutton" style="position: absolute;left: 210px;margin-left: 20%">create new file</button>
+</div>
 </body>
 </html>
