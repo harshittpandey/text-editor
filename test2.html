@@ -31,6 +31,30 @@
           top:0px;
         }*/
     </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  // jquery to count words
+  $(document).ready(function()
+{
+var wordCounts = {};
+$("#ac1").keyup(
+    function() {
+    var matches = this.value.match(/\b/g);
+    wordCounts[this.id]= matches ? matches.length/2 : 0;
+    var finalCount = 0;
+    $.each(wordCounts, 
+        function(k, v) {
+        finalCount += v;
+    }
+    );
+    $('#display_count').html(finalCount);
+}
+);
+}); 
+
+</script>
+
 </head>
 <body onload="loadme()" class="w3-light-grey">
     <div class="window" id="window"><!--window is the container. which contains another div button  -->
@@ -203,10 +227,12 @@
  -->            </p>
         </div>
     </div>
-    <div class="textarea" style="margin-top: 110px; margin-left: 8vh;margin-right: 8vh">
-      <p class="w3-white" contenteditable="true"  style=";border: none;width: 100%;height: 80vh" >
-        
-      </p>
+    <div class="textarea" style="margin-top: 105px; margin-left: 8vh;margin-right: 8vh">
+      <textarea id="ac1" class="w3-white" contenteditable="true"  style=";border: none;width: 100%;height: 80vh;" >
+
+
+      </textarea>words
+      <span id="display_count"> 0</span>
     </div>
 
 
