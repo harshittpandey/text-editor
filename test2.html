@@ -31,6 +31,7 @@
         /*.window:hover > .button{
           top:0px;
         }*/
+
     </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -219,23 +220,23 @@ $("#ac1").keyup(
             </div>
             <br>
             <div class="w3-bar ">
-              <div class="w3-button w3-bar-item w3-light-grey w3-padding-small" style="font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
-                <i class="fa fa-bold"></i>
+              <div class="w3-bar-item w3-padding-small" id="bold" onclick="changestyle('bold')" style="cursor: pointer;font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-bold w3-text-white"></i>
               </div>
-              <div class="w3-button w3-bar-item w3-light-grey w3-padding-small" style="font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
-                <i class="fa fa-italic"></i>
+              <div class="w3-bar-item w3-padding-small" id="italic" style="cursor: pointer;font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-italic w3-text-white"></i>
               </div>
-              <div class="w3-button w3-bar-item w3-light-grey w3-padding-small" style="font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
-                <i class="fa fa-underline"></i>
+              <div class="w3-bar-item w3-padding-small" id="underline" style="cursor: pointer;font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-underline w3-text-white"></i>
               </div>
-              <div class="w3-button w3-bar-item w3-light-grey w3-padding-small" style="font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
-                <i class="fa fa-strikethrough"></i>
+              <div class="w3-bar-item w3-padding-small" id="strikethrough" style="cursor: pointer;font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-strikethrough w3-text-white"></i>
               </div>
-              <div class="w3-button w3-bar-item w3-light-grey w3-padding-small" style="font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
-                <i class="fa fa-subscript"></i>
+              <div class="w3-bar-item w3-padding-small" id="subscript" style="cursor: pointer;font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-subscript w3-text-white"></i>
               </div>
-              <div class="w3-button w3-bar-item w3-light-grey w3-padding-small" style="font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
-                <i class="fa fa-superscript"></i>
+              <div class="w3-bar-item w3-padding-small" id="superscript" style="cursor: pointer;font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-superscript w3-text-white"></i>
               </div>
 
               <div class="w3-bar-item" style="font-size: 8px;margin-left: 0px;"> 
@@ -342,6 +343,12 @@ $("#ac1").keyup(
      
      </div>
    </div>
+
+   <script type="text/javascript">
+     function changestyle(id) {
+      $(id).addclass("w3-light-grey");
+     }
+   </script>
 
      <script>
       document.getElementsByClassName("tablink")[0].click();
