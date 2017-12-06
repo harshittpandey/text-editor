@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style type="text/css">
@@ -33,11 +34,11 @@
         }*/
 
     </style>
-
+<script src="panel.js" ></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
   // jquery to count words
-  $(document).ready(function()
+$(document).ready(function()
 {
 var wordCounts = {};
 $("#ac1").keyup(
@@ -220,7 +221,7 @@ $("#ac1").keyup(
             </div>
             <br>
             <div class="w3-bar ">
-              <div class="w3-bar-item w3-padding-small" id="bold" onclick="changestyle('bold')" style="cursor: pointer;font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+              <div class="w3-bar-item w3-padding-small" id="bold" onclick="bold_fun()" style="cursor: pointer;font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
                 <i class="fa fa-bold w3-text-white"></i>
               </div>
               <div class="w3-bar-item w3-padding-small" id="italic" style="cursor: pointer;font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
@@ -351,67 +352,13 @@ $("#ac1").keyup(
    </script>
 
      <script>
-      document.getElementsByClassName("tablink")[0].click();
-      var modal = document.getElementById("id01");
-      function openModal(evt, Name) {
-        var i, x, tablinks;
-        x = document.getElementsByClassName("modal");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < x.length; i++) {
-          tablinks[i].classList.remove("w3-light-grey");
-        }
-        document.getElementById(Name).style.display = "block";
-        evt.currentTarget.classList.add("w3-light-grey");
-      }
-
-      window.onclick = function(event) 
-      {
-          if (event.target == modal)
-           {
-              modal.style.display = "none";
-          }
-      }
     </script>
      
     <script type="text/javascript">
      // function loadme() {
      //  var view= 0;
      // }
-     var view = 0;
-     function runme()
-      {
-        if(view == 0)
-          {
-            document.getElementById("button").style.top = "0px";
-            document.getElementById("window").style.height = "300px";
-            // Code for Safari
-            document.getElementById("up").style.WebkitTransform = "rotate(180deg)"; 
-            // Code for IE9
-            document.getElementById("up").style.msTransform = "rotate(180deg)"; 
-            // Standard syntax
-            document.getElementById("up").style.transform = "rotate(180deg)"; 
-            // document.getElementById("up").style.display = "none";
-            // document.getElementById("down").style.display = "block";
-            view =1;
-          }
-        else
-        {
-          document.getElementById("button").style.top = "-80px";
 
-            document.getElementById("window").style.height = "120px";
-          // Code for Safari
-            document.getElementById("up").style.WebkitTransform = "rotate(0deg)"; 
-            // Code for IE9
-            document.getElementById("up").style.msTransform = "rotate(0deg)"; 
-            // Standard syntax
-            document.getElementById("up").style.transform = "rotate(0deg)"; 
-            
-          view= 0;
-        }
-      }
     </script>
 </body>
 </html>
