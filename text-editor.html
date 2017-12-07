@@ -4,10 +4,16 @@
 	<title>text editor</title>
 	<script src="https://use.fontawesome.com/aac5c45839.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style type="text/css">
+    button{
+      background: #fff;
+      border: 1px #bcbcbc solid;
+    }
+  </style>
 </head>
 	<body onload="enableEditMode();">
       <div>
-      	<button id="bold" style="border:none" onclick="make_bold()" ><i class="fa fa-bold"></i></button>
+      	<button id="bold" onclick="make_bold()" ><i class="fa fa-bold"></i></button>
       	<button onclick="execCmd('italic');"><i class="fa fa-italic"></i></button>
       	<button onclick="execCmd('underline');"><i class="fa fa-underline"></i></button>
       	<button onclick="execCmd('strikeThrough');"><i class="fa fa-strikethrough"></i></button>
@@ -110,15 +116,16 @@
         function make_bold() {
         	bold=1;
         	execCmd('bold');
-            var bold_style = document.getElementById('bold');
-            if( $('#bold').css('border') == 'none' ) {
-            // bold_style.style.border ="1px solid black";
-            console.log("yes");
-            }
-            else {
-            // bold_style.style.border ="none";
-            console.log("no");
-            }
+             var bold_style = document.getElementById('bold');
+             bold_style.style.background="#e5e5e5";
+            // if( $('#bold').css('border') == 'none' ) {
+            // // bold_style.style.border ="1px solid black";
+            // console.log("yes");
+            // }
+            // else {
+            // // bold_style.style.border ="none";
+            // console.log("no");
+            // }
 
         }
 
