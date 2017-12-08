@@ -3,6 +3,7 @@
 <head>
 	<title>text editor</title>
 	<script src="https://use.fontawesome.com/aac5c45839.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 	<body onload="enableEditMode();">
       <div>
@@ -49,6 +50,15 @@
       		<option value="H6">
       			H6
       		</option>
+          <option value="P">
+            P
+          </option>
+          <option value="DL">
+            DL
+          </option>
+          <option value="BLOCKQUOTE">
+            BLOCKQUOTE
+          </option>
       	</select>
       	<button onclick="execCmd('insertHorizontalRule')">HR</button>
       	<button onclick="execCmd('createLink',prompt('Enter a URL','http://'));"><i class="fa fa-link"></i></button>
