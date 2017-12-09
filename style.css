@@ -11,7 +11,7 @@ select#soflow {
    -moz-padding-start: 2px;
    -webkit-user-select: none;
    -moz-user-select: none;
-   background-image: url(), -webkit-linear-gradient(#FAFAFA, #F4F4F4 80%, #E5E5E5);
+   -webkit-background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 80%, #E5E5E5);
    background-position: 97% center;
    background-repeat: no-repeat;
    border: none;
@@ -28,3 +28,12 @@ select#soflow {
    box-shadow: none !important;
     padding: 2px 8px !important;
 }
+
+#slidecontainer {
+    background-color: #2d2d2d;
+    border: 1px solid #2d2d2d; 
+}
+/*
+.angledown{
+   -moz-display:none;
+}*/
