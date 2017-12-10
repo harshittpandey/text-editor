@@ -9,25 +9,45 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/Bold.js"></script>
+    <script src="js/Execcommand.js"></script>
+    <script src="js/Insertorderedlist.js"></script>
+    <script src="js/Insertunorderedlist.js"></script>
+    <script src="js/pageindent.js"></script>
+    <script src="js/printfile.js"></script>
+    <script src="js/variable.js"></script>
+    <script src="js/Wordcount.js"></script>
+    <script src="js/Zoom.js"></script>
+    <script src="js/Italic.js"></script>
+    <script src="js/Underline.js"></script>
+    <script src="js/Strikethrough.js"></script>
+    <script src="js/Subscript.js"></script>
+    <script src="js/Superscript.js"></script>
+    <script src="js/Justifycenter.js"></script>
+    <script src="js/Justifyfull.js"></script>
+    <script src="js/Justifyright.js"></script>
+    <script src="js/Justifyleft.js"></script>
+    <script src="js/color.js"></script>
+    <script src="js/fullscreen.js"></script>
 </head>
-<body>
+<body onbeforeunload="return myFunction()" onload="enableEditMode();" >
 	<div  class="w3-top w3-light-grey" style="padding-top: 5px;padding-bottom: 5px;border:1px solid #d3d3d3 ">
 		<div class="w3-btn" style="margin-left:2em; ">
-			<i class="fa fa-print w3-large"></i>
+			<i class="fa fa-print w3-large" onclick="runme();"></i>
 		</div>
 		|
-		<div class="w3-btn">
+		<div class="w3-btn" onclick="exec('undo');">
 			<i class="material-icons w3-large">
 				undo
 			</i>
 		</div>
-		<div class="w3-btn">
+		<div class="w3-btn" onclick="exec('redo');">
 			<i class="material-icons w3-large">
 				redo
 			</i>
 		</div>
 
-			 <select class="" name="option" id="soflow">
+			 <select class="heading123" name="option" id="soflow" onchange="execCommandWithArg('formatBlock',this.value);">
 			  <option value="" disabled selected>Paragraph Format <span class="angledown"><i class="fa fa-angle-down"></i></span> </option>
 			  	<option value="H4">
 	      			Normal Heading
@@ -48,7 +68,7 @@
 
 
 		
-			<select class="" name="option" id="soflow" style="width: 140px">
+			<select class="font123" name="option" id="soflow" style="width: 140px" onchange="execCommandWithArg('fontName',this.value);">
 			  <option value="" disabled selected>Font</option>
 			  	<option value="Arial">
       				Arial
@@ -73,7 +93,7 @@
 	      		</option>
 			 </select>
 
-			 <select class="" name="option" id="soflow" style="width: 80px">
+			 <select class="size123" name="option" id="soflow" style="width: 80px" onchange="execCommandWithArg('fontSize',this.value);">
 			  <option value="" disabled selected>Size</option>
 			  	<option value="1">1</option>
 	        	<option value="2">2</option>
@@ -84,84 +104,86 @@
 	        	<option value="7">7</option>
 			 </select>
 	
-		<div class="w3-btn" style="border:none">
+		<div class="w3-btn" id="bold1" onclick="execBold();" style="border:none">
 			<i class="fa fa-bold w3-medium"></i>
 		</div>
 
-		<div class="w3-btn" style="border:none">
+		<div class="w3-btn" id="italic1" onclick="execItalic();" style="border:none">
 			<i class="fa fa-italic w3-medium"></i>
 		</div>
 		
-		<div class="w3-btn" style="border:none">
+		<div class="w3-btn" id="underline1" onclick="execUnderline();" style="border:none">
 			<i class="fa fa-underline w3-medium"></i>
 		</div>
 
-		<div class="w3-btn" style="border:none">
+		<div class="w3-btn" id="strikeThrough1" onclick="execStrike();" style="border:none">
 			<i class="fa fa-strikethrough w3-medium"></i>
 		</div>
 		|
-		<div class="w3-btn" style="border:none">
+		<div class="w3-btn" id="subscript1" onclick="execSub();" style="border:none">
 			<i class="fa fa-subscript w3-medium"></i>
 		</div>
 
-		<div class="w3-btn" style="border:none">
+		<div class="w3-btn" id="superscript1" onclick="execSup();" style="border:none">
 			<i class="fa fa-superscript w3-medium"></i>
 		</div>
       	|
-		<div class="w3-btn" style="border: none;margin-top: 3px">
+
+
+		<div class="w3-btn" style="border: none;margin-top: 3px" onclick="document.getElementById('id01').style.display='block'">
 			<i class="material-icons w3-large">format_color_text</i>
 		</div>
 
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none; " onclick="document.getElementById('id02').style.display='block'">
 			<span class="glyphicon glyphicon-text-background"></span>
 		</div>
 		|
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" id="justifyLeft1" onclick="execJustifyl();" style="border: none;">
 			<i class="fa fa-align-left"></i>
 		</div>
         
-        <div class="w3-btn" style="border: none;">
+        <div class="w3-btn" id="justifyCenter1" onclick="execJustifyc();" style="border: none;">
 			<i class="fa fa-align-center"></i>
 		</div>
 
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" id="justifyRight1" onclick="execJustifyr();" style="border: none;">
 			<i class="fa fa-align-right"></i>
 		</div>
         
-        <div class="w3-btn" style="border: none;">
+        <div class="w3-btn" id="justifyFull1" onclick="execJustifyf();" style="border: none;">
 			<i class="fa fa-align-justify"></i>
 		</div>
 		|
         
-        <div class="w3-btn" style="border: none;">
+        <div class="w3-btn" style="border: none;" onclick="exec('createLink',prompt('Enter a URL','http://'));">
 			<i class="fa fa-link"></i>
 		</div>
 
-        <div class="w3-btn" style="border: none;">
+        <div class="w3-btn" style="border: none;" onclick="exec('unlink')">
 			<i class="fa fa-unlink"></i>
 		</div>		
 		|
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none;" id="insertUnorderedList1" onclick="execInsu();">
 			<i class="fa fa-list-ul"></i>
 		</div>
 
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none;" id="insertOrderedList1" onclick="execInso();">
 			<i class="fa fa-list-ol"></i>
 		</div>
 		|
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none;" onclick="exec('indent');">
 			<span class="glyphicon glyphicon-indent-left"></span>
 		</div>
 
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none;" onclick="execCmd('outdent');">
 			<span class="glyphicon glyphicon-indent-right"></span>
 		</div>
 
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none;" onclick="exec('insertHorizontalRule')">
 			<i class="material-icons" style="">linear_scale</i>
 		</div>
 		|
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none;" onclick="execCommandWithArg('inserImage',prompt('Enter the image URL', ''));">
 			<i class="fa fa-file-image-o"></i>
 		</div>
 
@@ -169,7 +191,7 @@
 			<i class="fa fa-table"></i>
 		</div>
 		|
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none;" onclick="toggleFullScreen(document.body)">
 			<span class="glyphicon glyphicon-fullscreen"></span>
 		</div>
         
@@ -178,16 +200,149 @@
 
 
 	<div class="w3-white" style="border:1px solid #d3d3d3;width: 100%;height: 93%">
-		<div class="" style="margin-left: 22vw;margin-right: 15vw;margin-top:13vh;margin-bottom: 2%;height: 90% ">
-			<iframe name="textfield" class="w3-card-2 w3-white w3-round" style="width: 750.333px;height: 800px;border:none; "></iframe>
+		<div id="screen" class="" style="margin-left: 22vw;margin-right: 15vw;margin-top:13vh;margin-bottom: 2%;height: 90% ">
+			<iframe name="textfield" id="screen2" class="w3-card-2 w3-white w3-round" style="width: 750.333px;height: 800px;border:none; "></iframe>
 		</div>
 	</div>
 
 	<div class="w3-light-grey w3-bottom" style="padding-bottom: 0px;">
-		<span class="w3-show-inline-block">WORDS :<span><div id="slidecontainer " class="w3-show-inline-block w3-display-bottomright " style="width: 150px;margin-right: 2vh">
-		  <input type="range" min="1" max="100" value="50"> 
-		</div>
+		<span class="w3-show-inline-block">WORDS : </span><span id="display_count"> 0</span> <!-- <span><div id="slidecontainer " class="w3-show-inline-block w3-display-bottomright " style="width: 150px;margin-right: 2vh">
+		  <input type="range" id="slidebar" min="1" max="100" value="50" oninput="zooM()"> 
+		</div> -->
 	</div>
+	
+
+
+	<div id="id01" class="w3-colormodal" style="cursor: move">
+	    <div class="w3-colormodal-content w3-card-4">
+	      <p class="" style="padding-left: 22px; padding-top: 10px">TEXT COLOR</p>
+	      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+	      <div class="  " style="padding: 1em">
+
+	    <table id="spl" style="background-color: #fff;cursor: pointer;" >
+	    <tr>
+	      <td  colspan="6" style="height:10px;padding: 1px;">
+	        <table>
+	        <td style="width: 4px;height: 4px;" id="colorme"></td>
+	        </table>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td style="width: 4px;height: 4px; background-color: #1abc9c" class="colortab" onclick="colorme('1abc9c')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #2ecc71" class="colortab" onclick="colorme('2ecc71')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #3498db" class="colortab" onclick="colorme('3498db')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #9b59b6" class="colortab" onclick="colorme('9b59b6')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #4e5f70" class="colortab" onclick="colorme('4e5f70')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #f1c40f" class="colortab" onclick="colorme('f1c40f')"></td>
+
+	    </tr>
+	    <tr>
+	      <td style="width: 4px;height: 4px;background-color: #16a085" class="colortab" onclick="colorme('16a085')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #27ae60" class="colortab" onclick="colorme('27ae60')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #2980b9" class="colortab" onclick="colorme('2980b9')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #8e44ad" class="colortab" onclick="colorme('8e44ad')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #2c3e50" class="colortab" onclick="colorme('2c3e50')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #f39c12" class="colortab" onclick="colorme('f39c12')"></td>
+	    </tr>
+	    <tr>
+	      <td style="width: 4px;height: 4px;background-color: #e67e22" class="colortab" onclick="colorme('e67e22')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #e74c3c" class="colortab" onclick="colorme('e74c3c')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #ecf0f1" class="colortab" onclick="colorme('ecf0f1')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #95a5a6" class="colortab" onclick="colorme('95a5a6')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #dddddd" class="colortab" onclick="colorme('dddddd')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #ffffff" class="colortab" onclick="colorme('ffffff')"></td>
+	    </tr>
+	    <tr>
+	      <td style="width: 4px;height: 4px;background-color: #d35400" class="colortab" onclick="colorme('d35400')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #c0392b" class="colortab" onclick="colorme('c0392b')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #bdc3c7" class="colortab" onclick="colorme('bdc3c7')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #7f8c8d" class="colortab" onclick="colorme('7f8c8d')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #999999" class="colortab" onclick="colorme('999999')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #000000" class="colortab" onclick="colorme('000000')"></td>
+	    </tr>
+	  </table>
+
+	      </div>
+	    </div>
+    </div>
+
+
+    <div id="id02" class="w3-colormodal" style="cursor: move">
+	    <div class="w3-colormodal-content-1 w3-card-4">
+	      <p class="" style="padding-left: 22px; padding-top: 10px">TEXT BACKGROUND COLOR</p>
+	      <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+	      <div class="  " style="padding: 1em">
+
+	    <table id="spl" style="background-color: #fff;cursor: pointer;" >
+	    <tr>
+	      <td  colspan="6" style="height:10px;padding: 1px;">
+	        <table>
+	        <td style="width: 4px;height: 4px;" id="colorme1"></td>
+	        </table>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td style="width: 4px;height: 4px; background-color: #1abc9c" class="colortab" onclick="colorme1('1abc9c')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #2ecc71" class="colortab" onclick="colorme1('2ecc71')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #3498db" class="colortab" onclick="colorme1('3498db')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #9b59b6" class="colortab" onclick="colorme1('9b59b6')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #4e5f70" class="colortab" onclick="colorme1('4e5f70')"></td>
+	      <td style="width: 4px;height: 4px; background-color: #f1c40f" class="colortab" onclick="colorme1('f1c40f')"></td>
+
+	    </tr>
+	    <tr>
+	      <td style="width: 4px;height: 4px;background-color: #16a085" class="colortab" onclick="colorme1('16a085')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #27ae60" class="colortab" onclick="colorme1('27ae60')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #2980b9" class="colortab" onclick="colorme1('2980b9')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #8e44ad" class="colortab" onclick="colorme1('8e44ad')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #2c3e50" class="colortab" onclick="colorme1('2c3e50')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #f39c12" class="colortab" onclick="colorme1('f39c12')"></td>
+	    </tr>
+	    <tr>
+	      <td style="width: 4px;height: 4px;background-color: #e67e22" class="colortab" onclick="colorme1('e67e22')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #e74c3c" class="colortab" onclick="colorme1('e74c3c')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #ecf0f1" class="colortab" onclick="colorme1('ecf0f1')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #95a5a6" class="colortab" onclick="colorme1('95a5a6')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #dddddd" class="colortab" onclick="colorme1('dddddd')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #ffffff" class="colortab" onclick="colorme1('ffffff')"></td>
+	    </tr>
+	    <tr>
+	      <td style="width: 4px;height: 4px;background-color: #d35400" class="colortab" onclick="colorme1('d35400')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #c0392b" class="colortab" onclick="colorme1('c0392b')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #bdc3c7" class="colortab" onclick="colorme1('bdc3c7')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #7f8c8d" class="colortab" onclick="colorme1('7f8c8d')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #999999" class="colortab" onclick="colorme1('999999')"></td>
+	      <td style="width: 4px;height: 4px;background-color: #000000" class="colortab" onclick="colorme1('000000')"></td>
+	    </tr>
+	  </table>
+
+	      </div>
+	    </div>
+    </div>
+
+<script type="text/javascript">
+ var bold=0,italic=0,underline=0,strikeThrough=0,justifyLeft=0,justifyCenter=0,justifyRight=0,justifyFull=0,subscript=0,superscript=0,insertUnorderedList=0,insertOrderedList=0;
+        var showing = false;
+        var EditMode = true; 
+	function enableEditMode () {
+      		textfield.document.designMode ='On';
+      }
+
+      $(document).ready(function(){
+	        $('.heading123').prop('selectedIndex',0);
+	        $('.font123').prop('selectedIndex',0); 
+	        $('.size123').prop('selectedIndex',0);  
+	});
+
+     dragElement(document.getElementById(("id01")));
+     dragElement(document.getElementById(("id02")));
+
+</script>
+<script>
+function myFunction() {
+	return "Do Something right now";
+}
+</script>
 
 </body>
 </html>

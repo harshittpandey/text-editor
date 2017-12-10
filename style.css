@@ -1,3 +1,9 @@
+  html, body {
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
 select#soflow {
    -webkit-appearance: button;
    -moz-appearance: button;
@@ -37,3 +43,53 @@ select#soflow {
 .angledown{
    -moz-display:none;
 }*/
+  *:fullscreen
+  *:-ms-fullscreen,
+  *:-webkit-full-screen,
+  *:-moz-full-screen {
+     overflow: auto !important;
+  }
+
+  th, td {
+    border: 0.1px solid #2d2d2d;
+    padding: 10px;
+}
+#spl {
+    border-spacing: 5px;
+    border: 1px solid #d3d3d3;
+    padding: 7px;   
+}
+.colortab{
+cursor: pointer; 
+}
+
+.w3-colormodal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 10px;
+    top: 0;
+    overflow: auto;
+    background-color: transparent;
+    background-color: transparent;
+}
+.w3-colormodal-content {
+    margin: auto;
+    background-color: #dddddd;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 190px;
+    resize: both;
+}
+
+.w3-colormodal-content-1 {
+    margin: auto;
+    background-color: #dddddd;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 200px;
+    resize: both;
+}
