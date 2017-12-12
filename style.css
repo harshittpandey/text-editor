@@ -93,3 +93,37 @@ cursor: pointer;
     width: 200px;
     resize: both;
 }
+
+.w3-btn {
+  position: relative;
+}
+
+.w3-btn .tooltiptext {
+    visibility: hidden;
+    width: 50px;
+    font-size: 10px;
+    background-color: #d3d3d3;
+    color: #2d2d2d;
+    border-radius: 4px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 85px;
+    margin-left: -60px;
+}
+
+.w3-btn .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #d3d3d3 transparent;
+}
+
+.w3-btn:hover .tooltiptext {
+    visibility: visible;
+}
