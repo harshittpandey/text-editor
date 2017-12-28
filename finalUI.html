@@ -29,6 +29,35 @@
     <script src="js/Justifyleft.js"></script>
     <script src="js/color.js"></script>
     <script src="js/fullscreen.js"></script>
+    <script>
+    	function createTable()
+    {
+
+    	var nrow=Number(document.getElementById('rown').value);
+    	var ncol=Number(document.getElementById('coln').value);
+    	var twidth=Number(document.getElementById('twidth').value);
+    	var theight=Number(document.getElementById('theight').value);
+    	var cellpadd=Number(document.getElementById('cellpadd').value);
+    	var frame=document.getElementById('screen2');
+    	var iframe=frame.contentWindow.document.body;
+       var table =document.createElement("table");
+       for(var i=0;i<nrow;i++)
+       {
+       	var row=table.insertRow(i);
+       	for(var j=0;j<ncol;j++){
+       		var col=row.insertCell(j);
+       		col.contentEditable="true";
+       		col.style.border="1px solid black";
+       	}
+       }
+      table.cellPadding=String(cellpadd);
+      table.style.width=String(twidth)+"%";
+      table.style.height=String(theight)+"px";
+      table.style.border="1px solid black";
+      iframe.appendChild(table);
+    }
+    
+    </script>
 </head>
 <body onbeforeunload="return myFunction()" onload="enableEditMode();" >
 	<div  class="w3-top w3-light-grey" style="padding-top: 5px;padding-bottom: 5px;border:1px solid #d3d3d3 ">
@@ -187,10 +216,11 @@
 			<i class="fa fa-file-image-o"></i>
 		</div>
 
-		<div class="w3-btn" style="border: none;">
+		<div class="w3-btn" style="border: none;" data-toggle="modal" data-target="#myModal">
 			<i class="fa fa-table"></i>
 		</div>
 		|
+
 		<div class="w3-btn" style="border: none;" onclick="toggleFullScreen(document.body)">
 			<span class="glyphicon glyphicon-fullscreen"></span>
 		</div>
@@ -342,6 +372,31 @@ function myFunction() {
 	return "Do Something right now";
 }
 </script>
+
+
+<!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Table Properties</h4>
+                </div>
+                <div class="modal-body">
+                              Rows         <input type="textbox" id="rown"> </input><br><br>
+                              Columns      <input type="textbox" id="coln"> </input><br><br>
+                              Width        <input type="textbox" id="twidth"> </input><br><br>
+                              Height       <input type="textbox" id="theight"> </input><br><br>
+                              Cell padding <input type="textbox" id="cellpadd"> </input><br><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="createTable()" data-dismiss="modal"  >OK</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
 
 </body>
 </html>
