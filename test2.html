@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style type="text/css">
+        .window{
+          width:100%;
+          height:120px;
+          position:absolute;/*as i want to set the position relative to my window. check another values of position and cover all the changes::: https://www.w3schools.com/css/css_positioning.asp*/
+          top:0;
+          right:0;
+          overflow:hidden;/*although the button bar is there always but it is invisible as we have positioned it at -200px from right
+              change the values of overflow:::: https://www.w3schools.com/css/css_overflow.asp
+          */
+        }
+        .window > .button{
+          overflow: visible;
+          position:absolute;
+          width:100%;
+          height:120px; 
+          background-color: rgb(0,0,0); /* Black fallback color */
+          background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+          opacity: 0.8;
+          top:-80px;
+          transition:0.6s ease;/*try to change the transition and check the effects*/
+        }
+         
+        /*.window:hover > .button{
+          top:0px;
+        }*/
+
+    </style>
+<script src="panel.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  // jquery to count words
+$(document).ready(function()
+{
+var wordCounts = {};
+$("#ac1").keyup(
+    function() {
+    var matches = this.value.match(/\b/g);
+    wordCounts[this.id]= matches ? matches.length/2 : 0;
+    var finalCount = 0;
+    $.each(wordCounts, 
+        function(k, v) {
+        finalCount += v;
+    }
+    );
+    $('#display_count').html(finalCount);
+}
+);
+}); 
+
+</script>
+
+</head>
+<body onload="loadme()" class="w3-light-grey">
+    <div class="window" id="window"><!--window is the container. which contains another div button  -->
+        <div id="button" class="button"><!--is all you need  -->
+            <div class="w3-bar w3-text-white w3-small" >
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                File<i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    New Project
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Recent Projects
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Open
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Save
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Save as
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Export
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Print
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Exit
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Edit <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    Select Text
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Hide
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Delete
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Show reference
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Library <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    E-Library
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Your Library
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Purchase Book
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    External references
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Read <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    Open Book
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Highlight Selection
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Zoom In
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Zoom Out
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Write <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'">
+                    Insert
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Design
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Review
+                  </div>
+                </div>
+              </div>
+              
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Project <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    Cover Page
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Export to pdf
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Chat
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Share
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Publish
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Help <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    Get Started
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    User Feedback
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Search
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    About us
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="position: absolute;right: 0;background-color:transparent;color: #fff ">
+                Account <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4" style="position: absolute;right: 1vh">
+                  <div class="w3-bar-item w3-button">
+                    Login
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Information
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="w3-bar w3-white" ><!--in dono bar mei baaki ki cheezain daalni hei  -->
+             .
+            </div>
+            <br>
+            <div class="w3-bar ">
+              <div class="w3-bar-item w3-padding-small" id="bold" onclick="bold_fun()" style="cursor: pointer;font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-bold w3-text-white"></i>
+              </div>
+              <div class="w3-bar-item w3-padding-small" id="italic" style="cursor: pointer;font-size: 13px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-italic w3-text-white"></i>
+              </div>
+              <div class="w3-bar-item w3-padding-small" id="underline" style="cursor: pointer;font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-underline w3-text-white"></i>
+              </div>
+              <div class="w3-bar-item w3-padding-small" id="strikethrough" style="cursor: pointer;font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-strikethrough w3-text-white"></i>
+              </div>
+              <div class="w3-bar-item w3-padding-small" id="subscript" style="cursor: pointer;font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-subscript w3-text-white"></i>
+              </div>
+              <div class="w3-bar-item w3-padding-small" id="superscript" style="cursor: pointer;font-size: 14px;border-radius: 30%;margin-left: 10px;margin-top: 6px">
+                <i class="fa fa-superscript w3-text-white"></i>
+              </div>
+
+              <div class="w3-bar-item" style="font-size: 8px;margin-left: 0px;"> 
+                  <form class="" action="" style="border-radius: 30%;">
+                      <select class="w3-select" name="option">
+                        <option value="" disabled selected>Select Fonts</option>
+                        <option value="" disabled style="font-weight: bold">Serif</option>
+                        <option value="1">Georgia</option>
+                        <option value="">Palatino</option>
+                        <option value="">Times New Roman</option>
+                        <option value="" disabled><b> Sans-Serif</b></option>
+                        <option value="">Arial</option>
+                        <option value="">Arial Black</option>
+                        <option value="">Comic Sans MS</option>
+                        <option value="">Impact</option>
+                        <option value="">Lucida Grande</option>
+                        <option value="">Tahoma</option>
+                        <option value="">Trebuchet MS</option>
+                        <option value="">Verdana</option>
+                        <option value="" disabled><b>Monospace</b></option>
+                        <option value="" >Courier</option>
+                        <option value="" >Monaco</option>
+                        
+                      </select>
+                   </form>
+              </div>
+
+              <div class="w3-bar-item" style="font-size: 10px;margin-left: 0px;"> 
+                  <form class="" action="" style="border-radius: 30%;">
+                      <select class="w3-select" name="option">
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11" selected>11</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                        <option value="28">28</option>
+                        <option value="36">36</option>
+                        <option value="48">48</option>
+                        <option value="72">72</option>                        
+                      </select>
+                   </form>
+              </div>
+
+               <div class="w3-button w3-bar-item w3-light-grey w3-padding-small" style="font-size: 5px;border-radius: 40%;margin-left: 10px;margin-top: 6px">
+                <i class="material-icons">format_size</i>
+              </div>
+              <!-- text color -->
+              <div class="w3-button w3-bar-item w3-padding-small" style="font-size: 5px;margin-left: 10px;margin-top: 6px">
+                <input type="color" name="">
+              </div>
+              <!-- text background -->
+              <div class="w3-button w3-bar-item w3-padding-small" style="font-size: 5px;margin-left: 10px;margin-top: 6px">
+                <input type="color" name="">
+              </div>
+              
+            </div>
+
+            <p style="cursor: pointer;background: white;position: absolute;left: 50%;top: 85px;border: 1px solid #fff;border-radius: 50% " onclick="runme()">
+              <i id="up" class="fa fa-angle-double-down w3-padding-small" style="font-size: 34px"></i>
+<!--               <i class="down fa fa-angle-double-up w3-padding-small" style="font-size: 34px;display: none"></i>
+ -->            </p>
+        </div>
+    </div>
+    <div class="textarea" style="margin-top: 105px; margin-left: 8vh;margin-right: 8vh">
+      <textarea id="ac1" class="w3-white" contenteditable="true"  style=";border: none;width: 100%;height: 80vh;" >
+
+
+      </textarea>words
+      <span id="display_count"> 0</span>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="id01" class="w3-modal">
+     <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+      <span onclick="document.getElementById('id01').style.display='none'" 
+          class="w3-button w3-hover-white w3-text-black w3-small w3-display-topright">&times;</span>
+       
+      <div class="w3-bar w3-border-bottom">
+       <button class="tablink w3-bar-item w3-button" onclick="openModal(event, 'Insert')">Insert</button>
+       <button class="tablink w3-bar-item w3-button" onclick="openModal(event, 'Design')">Design</button>
+       <button class="tablink w3-bar-item w3-button" onclick="openModal(event, 'Review')">Review</button>
+      </div>
+
+      <div id="Insert" class="w3-container modal">
+       <p>Here</p>
+      </div>
+
+      <div id="Design" class="w3-container modal">
+       <p>Here</p>
+      </div>
+
+      <div id="Review" class="w3-container modal">
+       <p>Here</p><br>
+      </div>
+
+     
+     </div>
+   </div>
+
+   <script type="text/javascript">
+     function changestyle(id) {
+      $(id).addclass("w3-light-grey");
+     }
+   </script>
+
+     <script>
+    </script>
+     
+    <script type="text/javascript">
+     // function loadme() {
+     //  var view= 0;
+     // }
+
+    </script>
+</body>
+</html>
