@@ -127,3 +127,48 @@ cursor: pointer;
 .w3-btn:hover .tooltiptext {
     visibility: visible;
 }
+
+.Topsidenav {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2d2d2d;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.Topsidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+.Topsidenav a:hover {
+    color: #f1f1f1;
+}
+
+.Topsidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#Topmain {
+    transition: margin-left .5s;
+    position: absolute;
+    right: 20px;
+    margin-top:45px;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
