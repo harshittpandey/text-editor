@@ -60,7 +60,169 @@
     </script>
 </head>
 <body onbeforeunload="return myFunction()" onload="enableEditMode();" >
-	<div  class="w3-top w3-light-grey" style="padding-top: 5px;padding-bottom: 5px;border:1px solid #d3d3d3 ">
+	
+	<div id="myTopSidenav" class="Topsidenav" >
+	<!--   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+	            <div class="w3-bar w3-text-white w3-small" style="margin-left: 40%;margin-top: 2%">
+	              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+	                File<i class="fa fa-caret-down"></i>
+	                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	                  <div class="w3-bar-item w3-button">
+	                    New Project
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Recent Projects
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Open
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Save
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Save as
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Export
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Print
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Exit
+	                  </div>
+	                </div>
+	              </div>
+	              
+
+	              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+	                Edit <i class="fa fa-caret-down"></i>
+	                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	                  <div class="w3-bar-item w3-button">
+	                    Select Text
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Hide
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Delete
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Show reference
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+	                Library <i class="fa fa-caret-down"></i>
+	                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	                  <div class="w3-bar-item w3-button">
+	                    E-Library
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Your Library
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Purchase Book
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    External references
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+	                Read <i class="fa fa-caret-down"></i>
+	                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	                  <div class="w3-bar-item w3-button">
+	                    Open Book
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Highlight Selection
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Zoom In
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Zoom Out
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+	                Write <i class="fa fa-caret-down"></i>
+	                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	                  <div class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'">
+	                    Insert
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Design
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Review
+	                  </div>
+	                </div>
+	              </div>
+	              
+	              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+	                Project <i class="fa fa-caret-down"></i>
+	                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	                  <div class="w3-bar-item w3-button">
+	                    Cover Page
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Export to pdf
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Chat
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Share
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Publish
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+	                Help <i class="fa fa-caret-down"></i>
+	                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	                  <div class="w3-bar-item w3-button">
+	                    Get Started
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    User Feedback
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Search
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    About us
+	                  </div>
+	                </div>
+	              </div>
+
+	              <div class="w3-bar-item w3-dropdown-hover" style="position: absolute;right: 50px;background-color:transparent;color: #fff ">
+	               <span class="w3-text-white w3-large"><i class="fa fa-user"></i></span> Account <i class="fa fa-caret-down"></i>
+	                <div class="w3-dropdown-content w3-bar-block w3-card-4" style="position: absolute;right: 1vh">
+	                  <div class="w3-bar-item w3-button">
+	                    Login
+	                  </div>
+	                  <div class="w3-bar-item w3-button">
+	                    Information
+	                  </div>
+	                </div>
+	              </div>
+
+	            </div>
+	</div>
+	<div id="Topmain">
+	  <span style="font-size:30px;cursor:pointer" id="arrowdown" onclick="openNav()"><i class="fa fa-angle-double-down"></i></span>
+	  <span style="font-size:30px;cursor:pointer;display: none;" onclick="openNav()" id="arrowup"><i class="fa fa-angle-double-up"></i></span>
+	</div>
+    
+	<div id="iconPanel"  class="w3-top w3-light-grey" style="padding-top: 5px;padding-bottom: 5px;border:1px solid #d3d3d3 ">
 		<div class="w3-btn " style="margin-left:2em; ">
 			<i class="fa fa-print   w3-large " onclick="runme();"></i>
 		</div>
@@ -228,8 +390,11 @@
 
 	</div>
 
-	<div class="w3-white" style="border:1px solid #d3d3d3;width: 100%;height: 93%">
-		<div id="screen" class="" style="margin-left: 22vw;margin-right: 15vw;margin-top:13vh;margin-bottom: 2%;height: 90% ">
+
+
+
+	<div id="textbox" class="w3-white" style="border:1px solid #d3d3d3;width: 100%;height: 93%">
+		<div id="screen" class="" style="margin-left: 22vw;margin-right: 15vw;margin-top:90px;margin-bottom: 2%;height: 90% ">
 			<iframe name="textfield" id="screen2" class="w3-card-2 w3-white w3-round" style="width: 750.333px;height: 800px;border:none; "></iframe>
 		</div>
 	</div>
@@ -349,6 +514,28 @@
 	    </div>
     </div>
 
+<!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Table Properties</h4>
+                </div>
+                <div class="modal-body">
+                              Rows         <input type="textbox" id="rown"> </input><br><br>
+                              Columns      <input type="textbox" id="coln"> </input><br><br>
+                              Width        <input type="textbox" id="twidth"> </input><br><br>
+                              Height       <input type="textbox" id="theight"> </input><br><br>
+                              Cell padding <input type="textbox" id="cellpadd"> </input><br><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="createTable()" data-dismiss="modal"  >OK</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 <script type="text/javascript">
  var bold=0,italic=0,underline=0,strikeThrough=0,justifyLeft=0,justifyCenter=0,justifyRight=0,justifyFull=0,subscript=0,superscript=0,insertUnorderedList=0,insertOrderedList=0;
         var showing = false;
@@ -372,31 +559,43 @@ function myFunction() {
 	return "Do Something right now";
 }
 </script>
+<script>
+var set = 0;  
+function openNav() {
+    if(set==0) {
+    set =1;
+    document.getElementById("myTopSidenav").style.height = "100px";
+    document.getElementById("Topmain").style.marginTop = "145px";
+    document.getElementById("iconPanel").style.marginTop = "100px";
+    document.getElementById("textbox").style.marginTop = "90px";
+    document.getElementById("arrowup").style.display = "block";
+    document.getElementById("arrowdown").style.display = "none";
+    document.getElementById("myTopSidenav").style.overflow = "visible";  
+  }
+  else
+  {
+    set =0;
+    document.getElementById("myTopSidenav").style.height = "0";
+    document.getElementById("Topmain").style.marginTop= "45px"; 
+    document.getElementById("textbox").style.marginTop = "0";
+    document.getElementById("iconPanel").style.marginTop = "0";
+    document.getElementById("arrowup").style.display = "none";
+    document.getElementById("arrowdown").style.display = "block";
+    document.getElementById("myTopSidenav").style.overflow = "hidden";
+  }
+}
 
-
-<!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Table Properties</h4>
-                </div>
-                <div class="modal-body">
-                              Rows         <input type="textbox" id="rown"> </input><br><br>
-                              Columns      <input type="textbox" id="coln"> </input><br><br>
-                              Width        <input type="textbox" id="twidth"> </input><br><br>
-                              Height       <input type="textbox" id="theight"> </input><br><br>
-                              Cell padding <input type="textbox" id="cellpadd"> </input><br><br>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="createTable()" data-dismiss="modal"  >OK</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-
+function closeNav() {
+    set=0;
+    document.getElementById("myTopSidenav").style.height = "0";
+    document.getElementById("Topmain").style.marginTop= "45px";
+    document.getElementById("iconPanel").style.marginTop = "0";
+    document.getElementById("textbox").style.marginTop = "0";
+    document.getElementById("arrowup").style.display = "none";
+    document.getElementById("arrowdown").style.display = "block";
+    document.getElementById("myTopSidenav").style.overflow = "hidden";
+}
+</script>
 
 </body>
 </html>
