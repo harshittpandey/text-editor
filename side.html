@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.Topsidenav {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2d2d2d;
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.Topsidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+.Topsidenav a:hover {
+    color: #f1f1f1;
+}
+
+.Topsidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#Topmain {
+    transition: margin-left .5s;
+    position: absolute;
+    right: 20px;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body >
+
+<div id="myTopSidenav" class="Topsidenav" >
+<!--   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+            <div class="w3-bar w3-text-white w3-small" style="margin-left: 40%;margin-top: 2%">
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                File<i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    New Project
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Recent Projects
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Open
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Save
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Save as
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Export
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Print
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Exit
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Edit <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    Select Text
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Hide
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Delete
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Show reference
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Library <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    E-Library
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Your Library
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Purchase Book
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    External references
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Read <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    Open Book
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Highlight Selection
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Zoom In
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Zoom Out
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Write <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'">
+                    Insert
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Design
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Review
+                  </div>
+                </div>
+              </div>
+              
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Project <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    Cover Page
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Export to pdf
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Chat
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Share
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Publish
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="background-color:transparent;color: #fff ">
+                Help <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <div class="w3-bar-item w3-button">
+                    Get Started
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    User Feedback
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Search
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    About us
+                  </div>
+                </div>
+              </div>
+
+              <div class="w3-bar-item w3-dropdown-hover" style="position: absolute;right: 50px;background-color:transparent;color: #fff ">
+               <span class="w3-text-white w3-large"><i class="fa fa-user"></i></span> Account <i class="fa fa-caret-down"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4" style="position: absolute;right: 1vh">
+                  <div class="w3-bar-item w3-button">
+                    Login
+                  </div>
+                  <div class="w3-bar-item w3-button">
+                    Information
+                  </div>
+                </div>
+              </div>
+
+            </div>
+</div>
+
+<div id="Topmain">
+  <span style="font-size:30px;cursor:pointer" id="arrowdown" onclick="openNav()"><i class="fa fa-angle-double-down"></i></span>
+  <span style="font-size:30px;cursor:pointer;display: none;" onclick="openNav()" id="arrowup"><i class="fa fa-angle-double-up"></i></span>
+</div>
+
+<script>
+var set = 0;  
+function openNav() {
+    if(set==0) {
+    set =1;
+    document.getElementById("myTopSidenav").style.height = "100px";
+    document.getElementById("Topmain").style.marginTop = "100px";
+    document.getElementById("arrowup").style.display = "block";
+    document.getElementById("arrowdown").style.display = "none";
+    document.getElementById("myTopSidenav").style.overflow = "visible";  
+  }
+  else
+  {
+    set =0;
+    document.getElementById("myTopSidenav").style.height = "0";
+    document.getElementById("Topmain").style.marginTop= "0"; 
+    document.getElementById("arrowup").style.display = "none";
+    document.getElementById("arrowdown").style.display = "block";
+    document.getElementById("myTopSidenav").style.overflow = "hidden";
+  }
+}
+
+function closeNav() {
+    set=0;
+    document.getElementById("myTopSidenav").style.height = "0";
+    document.getElementById("Topmain").style.marginTop= "0";
+    document.getElementById("arrowup").style.display = "none";
+    document.getElementById("arrowdown").style.display = "block";
+    document.getElementById("myTopSidenav").style.overflow = "hidden";
+}
+</script>
+     
+</body>
+</html> 
