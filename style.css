@@ -172,3 +172,6 @@ cursor: pointer;
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.w3-top {
+  z-index: 0;
+}
