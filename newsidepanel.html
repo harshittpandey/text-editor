@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>side panel</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/8940d8f8cd.js"></script>
+<script src="jquery.ntm.js"></script>
+<script>
+  $(document).ready(
+    function() {
+  $('.demo').ntm();
+  }
+);
+</script>
+
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+  <div class="tree-menu demo" id="tree-menu">
+   <div class="w3-bar-item" style="margin-top: 10px;"><i class="fa fa-sitemap" aria-hidden="true" style="margin-right: 10px;"></i>Project Hierarchy
+  <ul>
+    <li><a href="#">Project Name</a></li>
+    <li><a href="#">Introduction</a></li>
+    <li><a href="#">Problem</a></li>
+    <li><a href="#">Assumptions</a></li>
+    <li><a href="#">Part A</a>
+      <ul>
+        <li><a href="#">Chapter 1</a></li>
+        <li><a href="#">Chapter 2</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+
+<div class="w3-bar-item"><i class="material-icons" style="font-size:18px;margin-right: 10px;">local_library</i>Library
+  <ul>
+    <li><a href="#">Reference 1</a></li>
+    <li><a href="#">Reference 2</a></li>
+  </ul>
+  </div>
+
+<div class="w3-bar-item"><i class="material-icons" style="font-size:18px;margin-right: 10px;">color_lens</i>Color map
+  <ul>
+    <li><a href="#">Introduction</a></li>
+    <li><a href="#">Problem</a></li>
+    <li><a href="#">Assumptions</a></li>
+    <li><a href="#">Part A</a>
+      <ul>
+        <li><a href="#">Chapter 1</a></li>
+        <li><a href="#">Chapter 2</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Part B</a></li>
+    <li><a href="#">Conclusion</a></li>
+    <li><a href="#">References</a></li>
+    <li><a href="#">Notes</a></li>
+  </ul>
+  </div>
+
+
+</div>
+</div>      
+</body>
+</html>
