@@ -58,6 +58,30 @@
     }
     
     </script>
+     
+     <script>
+   function openFile(event) {
+    var input = event.target;
+    var reader = new FileReader();
+    reader.onload = function(){
+      var dataURL = reader.result;
+      var output=document.createElement("img");
+      output.src = dataURL;
+      output.style.height="300px";
+      output.style.width="400px";
+      var frame=document.getElementById('screen2');
+      var iframe=frame.contentWindow.document.body;
+      iframe.appendChild(output);
+
+      $(document).ready(function() {
+    $("#screen2").contents().find('div').draggable().resizable();
+});
+
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+    </script>
+
 </head>
 <body onbeforeunload="return myFunction()" onload="enableEditMode();" >
 	
@@ -405,6 +429,8 @@
 		<span class="w3-show-inline-block">WORDS : </span><span id="display_count"> 0</span> <!-- <span><div id="slidecontainer " class="w3-show-inline-block w3-display-bottomright " style="width: 150px;margin-right: 2vh">
 		  <input type="range" id="slidebar" min="1" max="100" value="50" oninput="zooM()"> 
 		</div> -->
+
+		<input type='file' accept='image/*' onchange='openFile(event)'>
 	</div>
 	
 
