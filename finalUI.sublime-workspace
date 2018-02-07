@@ -1,0 +1,626 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"w3-theme-d",
+				"w3-theme-d5"
+			],
+			[
+				"w3-the",
+				"w3-theme-l1"
+			],
+			[
+				"w3-t",
+				"w3-theme-blue-grey"
+			],
+			[
+				"w3-th",
+				"w3-theme-l1"
+			],
+			[
+				"w3-h",
+				"w3-hover-shadow"
+			],
+			[
+				"find",
+				"findById"
+			],
+			[
+				"w3",
+				"w3-right"
+			],
+			[
+				"pr",
+				"profession"
+			],
+			[
+				"pa",
+				"password2"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"user",
+				"users"
+			],
+			[
+				"succ",
+				"success_msg"
+			],
+			[
+				"User",
+				"UserSchema"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"st",
+				"style\tAttr"
+			],
+			[
+				"expre",
+				"express-messages"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"screen",
+				"screen2"
+			],
+			[
+				"conten",
+				"contentWindow"
+			],
+			[
+				"scr",
+				"screen2"
+			],
+			[
+				"ope",
+				"openFile"
+			],
+			[
+				"te",
+				"tree-toggler"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"nav",
+				"nav-header"
+			],
+			[
+				"make",
+				"makeVisible"
+			],
+			[
+				"visi",
+				"visible"
+			],
+			[
+				"my",
+				"myScript"
+			],
+			[
+				"onmouseo",
+				"onmouseover\tAttr"
+			],
+			[
+				"icon",
+				"iconPanel"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"con",
+				"contentWindow"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"I",
+				"Init"
+			],
+			[
+				"scre",
+				"screen2"
+			],
+			[
+				"s",
+				"style"
+			],
+			[
+				"n",
+				"ncol"
+			],
+			[
+				"scree",
+				"screen2"
+			],
+			[
+				"the",
+				"theight"
+			],
+			[
+				"crea",
+				"createTable"
+			],
+			[
+				"cre",
+				"createElement"
+			],
+			[
+				"t",
+				"twidth"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"b",
+				"black"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"doc",
+				"docB"
+			],
+			[
+				"tet",
+				"textfield"
+			],
+			[
+				"execI",
+				"execInso"
+			],
+			[
+				"ins",
+				"insertOrderedList1"
+			],
+			[
+				"execS",
+				"execSup"
+			],
+			[
+				"sup",
+				"superscript1"
+			],
+			[
+				"sub",
+				"subscript1"
+			],
+			[
+				"execJ",
+				"execJustifyf"
+			],
+			[
+				"jus",
+				"justifyFull1"
+			],
+			[
+				"exec",
+				"execJustifyr"
+			],
+			[
+				"just",
+				"justifyRight1"
+			],
+			[
+				"str",
+				"strikeThrough1"
+			],
+			[
+				"un",
+				"underline1"
+			],
+			[
+				"ita",
+				"italic1"
+			],
+			[
+				"inse",
+				"insertOrderedList"
+			],
+			[
+				"insert",
+				"insertOrderedList"
+			],
+			[
+				"inser",
+				"insertOrderedList"
+			],
+			[
+				"ju",
+				"justifyLeft"
+			],
+			[
+				"bol",
+				"bold1"
+			],
+			[
+				"text",
+				"textfield"
+			],
+			[
+				"font",
+				"fontSize"
+			],
+			[
+				"co",
+				"command"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"glo",
+				"glob"
+			],
+			[
+				"slide",
+				"slidevalue"
+			],
+			[
+				"sli",
+				"slidevalue"
+			],
+			[
+				"zoo",
+				"zooM"
+			],
+			[
+				"w3-bar",
+				"w3-bar-item"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"dis",
+				"display_count"
+			],
+			[
+				"match",
+				"matches"
+			],
+			[
+				"word",
+				"wordCount"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"w3-",
+				"w3-center"
+			],
+			[
+				"si",
+				"sidebar1"
+			],
+			[
+				"count",
+				"countWords"
+			],
+			[
+				"tex",
+				"text-indent"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"align",
+				"vertical-align"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"butt",
+				"button"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"myGame",
+				"myGamePiece"
+			],
+			[
+				"m",
+				"myGameArea"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Projects/loginapp/public/css/style.css",
+		"/C/Projects/loginapp/views/layouts/layout.handlebars",
+		"/C/Projects/loginapp/public/js/index.js",
+		"/C/Projects/loginapp/models/user.js",
+		"/C/Projects/loginapp/public/css/bootstrap.min.css",
+		"/C/Projects/loginapp/routes/users.js",
+		"/C/Projects/loginapp/views/register.handlebars",
+		"/C/Projects/loginapp/views/login.handlebars",
+		"/C/Projects/loginapp/views/index.handlebars",
+		"/C/Projects/loginapp/views/dashboard.handlebars",
+		"/C/Users/gaurav bisht/Downloads/simple-and-light-sign-up-form/js/index.js",
+		"/C/Users/gaurav bisht/Downloads/simple-and-light-sign-up-form/css/style.css",
+		"/C/Users/gaurav bisht/Downloads/simple-and-light-sign-up-form/index.html",
+		"/C/Users/gaurav bisht/Downloads/sign-up-login-form/index.html",
+		"/C/Users/gaurav bisht/Downloads/sign-up-login-form/css/style.css",
+		"/C/Users/gaurav bisht/Downloads/sign-up-login-form/js/index.js",
+		"/C/Projects/loginapp/routes/index.js",
+		"/C/Users/gaurav bisht/Downloads/buildingQueryDocuments_569ef31dd8ca393add3abeba/buildingQueryDocuments/buildingQueryDocuments.js",
+		"/C/Users/gaurav bisht/Downloads/buildingQueryDocuments_569ef31dd8ca393add3abeba/buildingQueryDocuments/package-lock.json",
+		"/C/Users/gaurav bisht/Downloads/buildingQueryDocuments_569ef31dd8ca393add3abeba/buildingQueryDocuments/package.json",
+		"/C/Projects/loginapp/app.js",
+		"/C/Users/gaurav bisht/Downloads/buildingQueryDocuments_569ef31dd8ca393add3abeba.zip",
+		"/C/Users/gaurav bisht/server.js",
+		"/C/Users/gaurav bisht/mongonode.js",
+		"/C/Users/gaurav bisht/expresstest.js",
+		"/C/Projects/loginapp/package.json",
+		"/C/Users/gaurav bisht/index.html",
+		"/C/Users/gaurav bisht/package-lock.json",
+		"/C/Users/gaurav bisht/myfirstmodule.js",
+		"/C/Users/gaurav bisht/fileupload.js",
+		"/C/Users/gaurav bisht/fileopennode.js",
+		"/C/Users/gaurav bisht/urltest.js",
+		"/C/Users/gaurav bisht/demourl.js",
+		"/C/Users/gaurav bisht/myfirst.js",
+		"/D/full js/testsidepanel.html",
+		"/D/full js/fileupload.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/finalUI.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/style.css",
+		"/C/Users/gaurav bisht/Desktop/text-editor/jquery.ntm.js",
+		"/D/full js/finalUITree.html",
+		"/D/full js/testing.html",
+		"/D/js files/finalUI.html",
+		"/D/full js/finalUI.html",
+		"/D/full js/variable.js",
+		"/D/js files/text-editor-final.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/newtest.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/pagebreak.js",
+		"/F/js prog/test1.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/text-editor.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/text-editor-final.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/test.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/test2.html",
+		"/C/Users/gaurav bisht/Downloads/tinymce_4.7.4_dev.zip",
+		"/F/js prog/print.js",
+		"/C/Users/gaurav bisht/Desktop/text-editor/...",
+		"/C/Users/gaurav bisht/Desktop/text-editor/zoomtest.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/zoom.js",
+		"/C/Users/gaurav bisht/Desktop/pdfconverter.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/textarea.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/css/style.css",
+		"/C/Users/gaurav bisht/Desktop/text-editor/index.html",
+		"/C/Users/gaurav bisht/Desktop/text-editor/texttest.html",
+		"/C/Users/gaurav bisht/Desktop/text.html",
+		"/C/Users/gaurav bisht/Downloads/login-form.zip",
+		"/C/Users/gaurav bisht/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-build",
+		"/C/Users/gaurav bisht/Desktop/test/test.cpp"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "finalUI.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

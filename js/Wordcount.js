@@ -3,6 +3,7 @@ $(document).ready(function()
 var wordCounts = {};
 $("#screen2").keyup(
     function() {
+    alert("hello bc!");
     var matches = this.value.match(/\b/g);
     wordCounts[this.id]= matches ? matches.length/2 : 0;
     var finalCount = 0;
@@ -11,6 +12,7 @@ $("#screen2").keyup(
         finalCount += v;
     }
     );
+    alert("hello fuckers");
     $('#display_count').html(finalCount);
 }
 );
