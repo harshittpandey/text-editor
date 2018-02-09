@@ -4,6 +4,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,50 +19,238 @@ $(document).ready(function () {
 });
 
 </script>
+<style type="text/css">
+
+.w3-buttonn{
+  color: #fff;
+  font-weight: 500;
+} 
+
+  .w3-buttonn:hover {
+    color: black!important;
+    background-color: #ccc!important;
+}
+
+  .btnn {
+    color: #fff!important;
+    background-color: #17232f!important;
+}
+
+.btnn:hover {
+    background-color: transparent!important;  
+}
+
+</style>
 
 <body>
 
-   <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+   <div class="w3-sidebar w3-bar-block" style="width:18%;background-color: #283c51">
             <div>
-                <ul class="nav nav-list">
-                    <div><label class="tree-toggler nav-header w3-button"><i class="fa fa-sitemap" aria-hidden="true" style="margin-right: 10px;margin-top: 20px;"></i>Project Hierarchy</label>
-                    <ul class="nav nav-list tree">
-                    <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Project Name</label></li>
-                    <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Introduction</label></li>
-                    <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Problem</label></li>
-                    <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Assumptions</label></li>
-                    <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>part A</label>
-                        <ul class="nav nav-list tree">
-                            <li><a href="#" style="margin-left: 10px;" class="w3-button"><span class="glyphicon glyphicon-triangle-right"></span>Chapter 1</a></li>
-                            <li><a href="#" style="margin-left: 10px;" class="w3-button"><span class="glyphicon glyphicon-triangle-right"></span>Chapter 2</a></li>
-                        </ul>
-                    </li>
+                <ul class="nav nav-list" >
+                    <div >
+                      <label class="tree-toggler nav-header w3-button w3-buttonn " style="margin-top: 15px;padding-top: 10px;margin-left: 0px;padding-right: 180px;margin-bottom: 0px;background-color: #447c97">
+                          <i class="fa fa-sitemap" aria-hidden="true" style="margin-right: 10px;margin-top: 0px;">
+                          </i>
+                          Project Hierarchy
+                         
+                      </label>
+                      <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                      <ul class="nav nav-list tree">
+                          <li style="">
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn " style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                     Project Name
+                              </label>
+                          </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                          <li>
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                    Introduction
+                              </label>
+                          </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                          <li>
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                    Problem
+                              </label>
+                          </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                          <li>
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                    Assumptions
+                              </label>
+                          </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                          <li>
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                    part A
+                              </label>
+                              <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                                    <ul class="nav nav-list tree">
+                                        <li>
+                                          <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                                            <i class="fa fa-angle-right w3-large" style="margin-right: 3px">
+                                            </i>
+                                            Chapter 1
+                                          </a>
+                                        </li>
+                                        <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                                        <li>
+                                          <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                                            <i class="fa fa-angle-right w3-large" style="margin-right: 3px">
+                                            </i>
+                                            Chapter 2
+                                          </a>
+                                        </li>
+                                        <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                                    </ul>
+                          </li>
                     </ul>
-                    </div>
+                  </div>
 
-
-                    <div><label class="tree-toggler nav-header w3-button"><i class="material-icons" style="font-size:18px;margin-right: 10px;">local_library</i>Library</label>
-                    <ul class="nav nav-list tree">
-                       <li><a href="#" style="margin-left: 10px;" class="w3-button"><span class="glyphicon glyphicon-triangle-right"></span>Reference 1</a></li>
-                       <li><a href="#" style="margin-left: 10px;" class="w3-button"><span class="glyphicon glyphicon-triangle-right"></span>Reference 2</a></li>
-                    </ul>
+                    <div>
+                      <label class="tree-toggler nav-header w3-button w3-buttonn " style="margin-left: 0px;padding-right: 180px;margin-bottom: 0px;background-color: #447c97">
+                        <i class="material-icons" style="font-size:18px;margin-right: 10px;">
+                          local_library
+                        </i>Library
+                      </label>
+                      <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                      <ul class="nav nav-list tree">
+                       <li>
+                          <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Reference 1
+                          </a>
+                       </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                       <li>
+                          <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Reference 2
+                          </a>
+                       </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                     </ul>
                    </div>
                     
-                    <div><label class="tree-toggler nav-header w3-button"><i class="material-icons" style="font-size:18px;margin-right: 10px;">color_lens</i>Color map</label>
-                     <ul class="nav nav-list tree">
-                      <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Introduction<i class="fa fa-edit" style="font-size:19px;margin-left: 75px;"></i></label></li>
-                      <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Problem<i class="fa fa-edit" style="font-size:19px;margin-left: 100px;"></i></label></li>
-                      <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Assumptions<i class="fa fa-edit" style="font-size:19px;margin-left: 68px;"></i></label></li>
-                      <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>part A<i class="fa fa-edit" style="font-size:19px;margin-left: 115px;"></i></label>
+
+
+                    <div>
+                      <label class="tree-toggler nav-header w3-button w3-buttonn " style="margin-left: 0px;padding-right: 180px;margin-bottom: 0px;background-color: #447c97">
+                          <i class="material-icons" style="font-size:18px;margin-right: 10px;">
+                            color_lens
+                          </i>
+                          Color map
+                      </label>
+                      <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                      <ul class="nav nav-list tree">
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Introduction
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 70px;">
+                            </i>
+                          </label>
+                        </li>
+                      
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Problem
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 90px">
+                            </i>
+                          </label>
+                        </li>
+
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Assumptions
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 62px;">
+                            </i>
+                          </label>
+                        </li>
+                        
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            part A
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 105px;">
+                            </i>
+                          </label>
+                          
                           <ul class="nav nav-list tree">
-                             <li><a href="#" style="margin-left: 10px;" class="w3-button"><span class="glyphicon glyphicon-triangle-right"></span>Chapter 1</a></li>
-                             <li><a href="#" style="margin-left: 10px;" class="w3-button"><span class="glyphicon glyphicon-triangle-right"></span>Chapter 2</a></li>
+                             <li>
+                                <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                                    <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                                    </i>
+                                    Chapter 1
+                                </a>
+                             </li>
+                             <li>
+                                <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                                      <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                                      </i>
+                                      Chapter 2
+                                </a>
+                             </li>
                           </ul>
                         </li>
-                      <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Part B<i class="fa fa-edit" style="font-size:19px;margin-left: 115px;"></i></label></li>
-                      <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Conclusion<i class="fa fa-edit" style="font-size:19px;margin-left: 80px;"></i></label></li>
-                      <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>References<i class="fa fa-edit" style="font-size:19px;margin-left: 82px;"></i></label></li>
-                      <li><label class="tree-toggler nav-header w3-button" style="margin-left: 10px;"><span class="glyphicon glyphicon-triangle-right"></span>Notes<i class="fa fa-edit" style="font-size:19px;margin-left: 118px;"></i></label></li>
+
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Part B
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 105px;">
+                            </i>
+                          </label>
+                        </li>
+
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Conclusion
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 75px;">
+                            </i>
+                          </label>
+                        </li>
+                      
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            References
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 70px;">
+                            </i>
+                          </label>
+                        </li>
+                      
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Notes
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 106px;">
+                            </i>
+                          </label>
+                        </li>
                     </ul>
                   </div>
 
