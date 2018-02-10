@@ -13,6 +13,55 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- sidepanel -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/8940d8f8cd.js"></script>
+<script src="jquery.ntm.js"></script>
+<script>
+$(document).ready(function () {
+    $('label.tree-toggler').click(function () {
+        $(this).parent().children('ul.tree').toggle(300);
+    });
+});
+
+</script>  
+
+<style type="text/css">
+
+.w3-buttonn{
+  color: #fff;
+  font-weight: 500;
+} 
+
+  .w3-buttonn:hover {
+    color: black!important;
+    background-color: #ccc!important;
+}
+
+  .btnn {
+    color: #fff!important;
+    background-color: #17232f!important;
+}
+
+.btnn:hover {
+    background-color: transparent!important;  
+}
+
+</style>
+
+
+    <!-- sidepanel -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/Bold.js"></script>
@@ -94,6 +143,7 @@
     </script>
 
 </head>
+
 <body onbeforeunload="return myFunction()" onload="enableEditMode();" >
 	
 	<div id="myTopSidenav" class="Topsidenav" >
@@ -252,28 +302,28 @@
 
 	            </div>
 	</div>
+
 	<div id="Topmain">
 	  <span style="font-size:30px;cursor:pointer" id="arrowdown" onclick="openNav();"><i class="fa fa-angle-double-down"></i></span>
 	  <span style="font-size:30px;cursor:pointer;display: none;" onclick="openNav();" id="arrowup"><i class="fa fa-angle-double-up"></i></span>
 	</div>
     
-	<div id="iconPanel"  class="w3-top w3-light-grey" style="padding-top: 5px;padding-bottom: 5px;border:1px solid #d3d3d3 ">
+	<div id="iconPanel"  class="w3-top w3-light-grey" style="padding-top: 5px;padding-bottom: 5px;border:1px solid #d3d3d3;margin-left: 220px;">
 		<div class="w3-btn " style="margin-left:2em; ">
-			<i class="fa fa-print   w3-large " onclick="runme();"></i>
+			<i class="fa fa-print   w3-medium " onclick="runme();"></i>
 		</div>
-		|
 		<div class="w3-btn" onclick="exec('undo');">
-			<i class="material-icons w3-large">
+			<i class="material-icons w3-medium">
 				undo
 			</i>
 		</div>
 		<div class="w3-btn" onclick="exec('redo');">
-			<i class="material-icons w3-large">
+			<i class="material-icons w3-medium">
 				redo
 			</i>
 		</div>
 
-			 <select class="heading123" name="option" id="soflow" onchange="execCommandWithArg('formatBlock',this.value);">
+			 <select class="heading123" name="option" id="soflow" onchange="execCommandWithArg('formatBlock',this.value);" style="width: 110px;">
 			  <option value="" disabled selected>Paragraph Format <span class="angledown"><i class="fa fa-angle-down"></i></span> </option>
 			  	<option value="H4">
 	      			Normal Heading
@@ -294,7 +344,7 @@
 
 
 		
-			<select class="font123" name="option" id="soflow" style="width: 140px" onchange="execCommandWithArg('fontName',this.value);">
+			<select class="font123" name="option" id="soflow" style="width: 100px" onchange="execCommandWithArg('fontName',this.value);">
 			  <option value="" disabled selected>Font</option>
 			  	<option value="Arial">
       				Arial
@@ -319,7 +369,7 @@
 	      		</option>
 			 </select>
 
-			 <select class="size123" name="option" id="soflow" style="width: 80px" onchange="execCommandWithArg('fontSize',this.value);">
+			 <select class="size123" name="option" id="soflow" style="width: 50px" onchange="execCommandWithArg('fontSize',this.value);">
 			  <option value="" disabled selected>Size</option>
 			  	<option value="1">1</option>
 	        	<option value="2">2</option>
@@ -331,21 +381,20 @@
 			 </select>
 	
 		<div class="w3-btn" id="bold1" onclick="execBold();" style="border:none">
-			<i class="fa fa-bold w3-medium"></i>
+			<i class="fa fa-bold w3-small"></i>
 		</div>
 
 		<div class="w3-btn" id="italic1" onclick="execItalic();" style="border:none">
-			<i class="fa fa-italic w3-medium"></i>
+			<i class="fa fa-italic w3-small"></i>
 		</div>
 		
 		<div class="w3-btn" id="underline1" onclick="execUnderline();" style="border:none">
-			<i class="fa fa-underline w3-medium"></i>
+			<i class="fa fa-underline w3-small"></i>
 		</div>
 
 		<div class="w3-btn" id="strikeThrough1" onclick="execStrike();" style="border:none">
-			<i class="fa fa-strikethrough w3-medium"></i>
+			<i class="fa fa-strikethrough w3-small"></i>
 		</div>
-		|
 		<div class="w3-btn" id="subscript1" onclick="execSub();" style="border:none">
 			<i class="fa fa-subscript w3-medium"></i>
 		</div>
@@ -353,17 +402,15 @@
 		<div class="w3-btn" id="superscript1" onclick="execSup();" style="border:none">
 			<i class="fa fa-superscript w3-medium"></i>
 		</div>
-      	|
 
 
 		<div class="w3-btn" style="border: none;margin-top: 3px" onclick="document.getElementById('id01').style.display='block'">
-			<i class="material-icons w3-large">format_color_text</i>
+			<i class="material-icons w3-medium">format_color_text</i>
 		</div>
 
 		<div class="w3-btn" style="border: none; " onclick="document.getElementById('id02').style.display='block'">
 			<span class="glyphicon glyphicon-text-background"></span>
 		</div>
-		|
 		<div class="w3-btn" id="justifyLeft1" onclick="execJustifyl();" style="border: none;">
 			<i class="fa fa-align-left"></i>
 		</div>
@@ -379,7 +426,6 @@
         <div class="w3-btn" id="justifyFull1" onclick="execJustifyf();" style="border: none;">
 			<i class="fa fa-align-justify"></i>
 		</div>
-		|
         
         <div class="w3-btn" style="border: none;" onclick="exec('createLink',prompt('Enter a URL','http://'));">
 			<i class="fa fa-link"></i>
@@ -388,7 +434,6 @@
         <div class="w3-btn" style="border: none;" onclick="exec('unlink')">
 			<i class="fa fa-unlink"></i>
 		</div>		
-		|
 		<div class="w3-btn" style="border: none;" id="insertUnorderedList1" onclick="execInsu();">
 			<i class="fa fa-list-ul"></i>
 		</div>
@@ -396,7 +441,6 @@
 		<div class="w3-btn" style="border: none;" id="insertOrderedList1" onclick="execInso();">
 			<i class="fa fa-list-ol"></i>
 		</div>
-		|
 		<div class="w3-btn" style="border: none;" onclick="exec('indent');">
 			<span class="glyphicon glyphicon-indent-left"></span>
 		</div>
@@ -408,7 +452,6 @@
 		<div class="w3-btn" style="border: none;" onclick="exec('insertHorizontalRule')">
 			<i class="material-icons" style="">linear_scale</i>
 		</div>
-		|
 		<div class="w3-btn" style="border: none;" onclick="execCommandWithArg('inserImage',prompt('Enter the image URL', ''));">
 			<i class="fa fa-file-image-o"></i>
 		</div>
@@ -416,7 +459,6 @@
 		<div class="w3-btn" style="border: none;" data-toggle="modal" data-target="#myModal">
 			<i class="fa fa-table"></i>
 		</div>
-		|
 
 		<div class="w3-btn" style="border: none;" onclick="toggleFullScreen(document.body)">
 			<span class="glyphicon glyphicon-fullscreen"></span>
@@ -428,6 +470,230 @@
 	<!-- <div style="width: 160px;background-color: #0d0d3f;margin-top: 45px;color: white;height: 800px;">
 		    	<p>Project Hierarchy</p>
 		    </div> -->
+
+    <!-- sidepanel -->
+
+     <div class="w3-sidebar w3-bar-block" style="width:18%;background-color: #283c51">
+            <div>
+                <ul class="nav nav-list" >
+                    <div >
+                      <label class="tree-toggler nav-header w3-button w3-buttonn " style="margin-top: 15px;padding-top: 10px;margin-left: 0px;padding-right: 180px;margin-bottom: 0px;background-color: #447c97">
+                          <i class="fa fa-sitemap" aria-hidden="true" style="margin-right: 10px;margin-top: 0px;">
+                          </i>
+                          Project Hierarchy
+                         
+                      </label>
+                      <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                      <ul class="nav nav-list tree">
+                          <li style="">
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn " style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                     Project Name
+                              </label>
+                          </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                          <li>
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                    Introduction
+                              </label>
+                          </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                          <li>
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                    Problem
+                              </label>
+                          </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                          <li>
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                    Assumptions
+                              </label>
+                          </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                          <li>
+                              <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                                    <i class="fa fa-angle-right w3-medium" style="margin-right: 3px">
+                                    </i>
+                                    part A
+                              </label>
+                              <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                                    <ul class="nav nav-list tree">
+                                        <li>
+                                          <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                                            <i class="fa fa-angle-right w3-large" style="margin-right: 3px">
+                                            </i>
+                                            Chapter 1
+                                          </a>
+                                        </li>
+                                        <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                                        <li>
+                                          <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                                            <i class="fa fa-angle-right w3-large" style="margin-right: 3px">
+                                            </i>
+                                            Chapter 2
+                                          </a>
+                                        </li>
+                                        <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                                    </ul>
+                          </li>
+                    </ul>
+                  </div>
+
+                    <div>
+                      <label class="tree-toggler nav-header w3-button w3-buttonn " style="margin-left: 0px;padding-right: 180px;margin-bottom: 0px;background-color: #447c97">
+                        <i class="material-icons" style="font-size:18px;margin-right: 10px;">
+                          local_library
+                        </i>Library
+                      </label>
+                      <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                      <ul class="nav nav-list tree">
+                       <li>
+                          <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Reference 1
+                          </a>
+                       </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                       <li>
+                          <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Reference 2
+                          </a>
+                       </li>
+                          <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                     </ul>
+                   </div>
+                    
+
+
+                    <div>
+                      <label class="tree-toggler nav-header w3-button w3-buttonn " style="margin-left: 0px;padding-right: 180px;margin-bottom: 0px;background-color: #447c97">
+                          <i class="material-icons" style="font-size:18px;margin-right: 10px;">
+                            color_lens
+                          </i>
+                          Color map
+                      </label>
+                      <hr style="margin-top: 0;margin-bottom: 0;height:1px;border:none;">
+                      <ul class="nav nav-list tree">
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Introduction
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 70px;">
+                            </i>
+                          </label>
+                        </li>
+                      
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Problem
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 90px">
+                            </i>
+                          </label>
+                        </li>
+
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Assumptions
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 62px;">
+                            </i>
+                          </label>
+                        </li>
+                        
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            part A
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 105px;">
+                            </i>
+                          </label>
+                          
+                          <ul class="nav nav-list tree">
+                             <li>
+                                <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                                    <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                                    </i>
+                                    Chapter 1
+                                </a>
+                             </li>
+                             <li>
+                                <a href="#" style="margin-left: 0;" class="w3-button w3-buttonn btnn">
+                                      <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                                      </i>
+                                      Chapter 2
+                                </a>
+                             </li>
+                          </ul>
+                        </li>
+
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Part B
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 105px;">
+                            </i>
+                          </label>
+                        </li>
+
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Conclusion
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 75px;">
+                            </i>
+                          </label>
+                        </li>
+                      
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            References
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 70px;">
+                            </i>
+                          </label>
+                        </li>
+                      
+                        <li>
+                          <label class="tree-toggler nav-header w3-button w3-buttonn btnn" style="margin-left: 0px;padding-left:30px ;padding-right: 180px;margin-bottom: 0px">
+                            <i class="fa fa-angle-right w3-small" style="margin-right: 3px">
+                            </i>
+                            Notes
+                            <i class="fa fa-edit" style="font-size:19px;margin-left: 106px;">
+                            </i>
+                          </label>
+                        </li>
+                    </ul>
+                  </div>
+
+
+                </ul>
+            </div>
+   </div>
+
+
+
+
+
+    <!-- sidepanel -->
+
 	<div id="textbox" class="w3-white" style="border:1px solid #d3d3d3;width: 100%;height: 93%;">
 		<div id="screen" class="" style="margin-left: 22vw;margin-right: 15vw;margin-top:90px;margin-bottom: 2%;height: 90% ">
 			<iframe name="textfield" id="screen2" class="w3-card-2 w3-white w3-round" style="width: 750.333px;height: 800px;border:none; ">
