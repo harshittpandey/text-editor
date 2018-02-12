@@ -90,6 +90,17 @@ $(document).ready(function () {
 
     <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
     <script>
+    function insertImage(){
+       var src1 = prompt("Please enter image url", " ");
+       var img=document.createElement("img");
+       img.src=src1;
+       var frame=document.getElementById('screen2');
+       var iframe=frame.contentWindow.document.body;
+       iframe.appendChild(img);
+    }
+
+
+
     	function createTable()
     {
 
@@ -452,7 +463,7 @@ $(document).ready(function () {
 		<div class="w3-btn" style="border: none;" onclick="exec('insertHorizontalRule')">
 			<i class="material-icons" style="">linear_scale</i>
 		</div>
-		<div class="w3-btn" style="border: none;" onclick="execCommandWithArg('inserImage',prompt('Enter the image URL', ''));">
+		<div class="w3-btn" style="border: none;" onclick="insertImage();">
 			<i class="fa fa-file-image-o"></i>
 		</div>
 
