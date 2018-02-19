@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<title>TextEditor</title>
+	<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=de + vice-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- sidepanel -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/8940d8f8cd.js"></script>
+<script src="jquery.ntm.js"></script>
+<script>
+$(document).ready(function () {
+    $('label.tree-toggler').click(function () {
+        $(this).parent().children('ul.tree').toggle(300);
+    });
+});
+
+</script>  
+
+<style type="text/css">
+
+.w3-buttonn{
+  color: #fff;
+  font-weight: 500;
+} 
+
+  .w3-buttonn:hover {
+    color: black!important;
+    background-color: #ccc!important;
+}
+
+  .btnn {
+    color: #fff!important;
+    background-color: #17232f!important;
+}
+
+.btnn:hover {
+    background-color: transparent!important;  
+}
+
+</style>
+
+
+    <!-- sidepanel -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/Bold.js"></script>
+    <script src="js/Execcommand.js"></script>
+    <script src="js/Insertorderedlist.js"></script>
+    <script src="js/Insertunorderedlist.js"></script>
+    <script src="js/pageindent.js"></script>
+    <script src="js/printfile.js"></script>
+    <script src="js/variable.js"></script>
+    <script src="js/Wordcount.js"></script>
+    <script src="js/Zoom.js"></script>
+    <script src="js/Italic.js"></script>
+    <script src="js/Underline.js"></script>
+    <script src="js/Strikethrough.js"></script>
+    <script src="js/Subscript.js"></script>
+    <script src="js/Superscript.js"></script>
+    <script src="js/Justifycenter.js"></script>
+    <script src="js/Justifyfull.js"></script>
+    <script src="js/Justifyright.js"></script>
+    <script src="js/Justifyleft.js"></script>
+    <script src="js/color.js"></script>
+    <script src="js/fullscreen.js"></script>
+    <script src="js/custom-file-input.js"></script>
+   <!-- adding div -->
+
+
+    <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+    <script>
+    function insertImage(){
+       var src1 = prompt("Please enter image url", " ");
+       var img=document.createElement("img");
+       img.src=src1;
+       var frame=document.getElementById('screen2');
+       var iframe=frame.contentWindow.document.body;
+       iframe.appendChild(img);
+    }
+
+
+
+    	function createTable()
+    {
+
+    	var nrow=Number(document.getElementById('rown').value);
+    	var ncol=Number(document.getElementById('coln').value);
+    	var twidth=Number(document.getElementById('twidth').value);
+    	var theight=Number(document.getElementById('theight').value);
+    	var cellpadd=Number(document.getElementById('cellpadd').value);
+    	var frame=document.getElementById('screen2');
+    	var iframe=frame.contentWindow.document.body;
+       var table =document.createElement("table");
+       for(var i=0;i<nrow;i++)
+       {
+       	var row=table.insertRow(i);
+       	for(var j=0;j<ncol;j++){
+       		var col=row.insertCell(j);
+       		col.contentEditable="true";
+       		col.style.border="1px solid black";
+       	}
+       }
+      table.cellPadding=String(cellpadd);
+      table.style.width=String(twidth)+"%";
+      table.style.height=String(theight)+"px";
+      table.style.border="1px solid black";
+      iframe.appendChild(table);
+    }
+    
+    </script>
+     
+     <script>
+   function openFile(event) {
+    var input = event.target;
+    var reader = new FileReader();
+    reader.onload = function(){
+      var dataURL = reader.result;
+      var output=document.createElement("img");
+      output.src = dataURL;
+      output.style.height="300px";
+      output.style.width="400px";
+      var frame=document.getElementById('screen2');
+      var iframe=frame.contentWindow.document.body;
+      iframe.appendChild(output);
+
+      $(document).ready(function() {
+    $("#screen2").contents().find('div').draggable().resizable();
+});
+
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+    </script>
+
+</head>
+
+<body onbeforeunload="return myFunction()" onload="enableEditMode();" >
+	
+<div contenteditable="true"    style=" width: 400px;height: 400px;margin-left: 100px; word-wrap: break-word;border: 2px solid black;">
+	
+
+</div>
+
+</body>
+</html>
