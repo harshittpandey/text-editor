@@ -149,13 +149,21 @@ $(document).ready(function () {
       iframe.appendChild(output);
 
       $(document).ready(function() {
-    $("#screen2").contents().find('div').draggable().resizable();
+    $("#screen2").contents().find('#sampleDIV').draggable().resizable();
 });
 
     };
     reader.readAsDataURL(input.files[0]);
   };
+
+
     </script>
+    <script>
+    $(function() {
+        var iframeBody = $("#screen2").contents().find("body");
+        var styleTag = iframeBody.append($('#sampleDIV'));
+    })
+</script>
 
 </head>
 
@@ -705,7 +713,7 @@ $(document).ready(function () {
 
 
 
-
+    <div id="sampleDIV" style="border: 2px solid black;width: 700px;height: 750px;position: fixed;" contenteditable="true">whatever</div>
 
     <!-- sidepanel -->
 
